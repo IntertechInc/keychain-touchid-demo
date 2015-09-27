@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C66A17601BB87205001A5602 /* KeychainInternetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A175F1BB87205001A5602 /* KeychainInternetPasswordViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		C68631361BAF402700F8A291 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68631351BAF402700F8A291 /* Security.framework */; };
 		C6CFB5651BAE1A71005ED203 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFB5641BAE1A71005ED203 /* AppDelegate.swift */; };
-		C6CFB5671BAE1A71005ED203 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFB5661BAE1A71005ED203 /* ViewController.swift */; };
+		C6CFB5671BAE1A71005ED203 /* KeychainPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFB5661BAE1A71005ED203 /* KeychainPasswordViewController.swift */; };
 		C6CFB56A1BAE1A71005ED203 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6CFB5681BAE1A71005ED203 /* Main.storyboard */; };
 		C6CFB56C1BAE1A71005ED203 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6CFB56B1BAE1A71005ED203 /* Images.xcassets */; };
 		C6CFB56F1BAE1A71005ED203 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6CFB56D1BAE1A71005ED203 /* LaunchScreen.xib */; };
@@ -26,10 +28,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C66A175F1BB87205001A5602 /* KeychainInternetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainInternetPasswordViewController.swift; sourceTree = "<group>"; };
+		C68631351BAF402700F8A291 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C6CFB55F1BAE1A71005ED203 /* KeychainTouchIdDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeychainTouchIdDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6CFB5631BAE1A71005ED203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6CFB5641BAE1A71005ED203 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C6CFB5661BAE1A71005ED203 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C6CFB5661BAE1A71005ED203 /* KeychainPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainPasswordViewController.swift; sourceTree = "<group>"; };
 		C6CFB5691BAE1A71005ED203 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C6CFB56B1BAE1A71005ED203 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C6CFB56E1BAE1A71005ED203 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C68631361BAF402700F8A291 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +64,7 @@
 		C6CFB5561BAE1A71005ED203 = {
 			isa = PBXGroup;
 			children = (
+				C68631351BAF402700F8A291 /* Security.framework */,
 				C6CFB5611BAE1A71005ED203 /* KeychainTouchIdDemo */,
 				C6CFB5771BAE1A71005ED203 /* KeychainTouchIdDemoTests */,
 				C6CFB5601BAE1A71005ED203 /* Products */,
@@ -78,7 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				C6CFB5641BAE1A71005ED203 /* AppDelegate.swift */,
-				C6CFB5661BAE1A71005ED203 /* ViewController.swift */,
+				C6CFB5661BAE1A71005ED203 /* KeychainPasswordViewController.swift */,
+				C66A175F1BB87205001A5602 /* KeychainInternetPasswordViewController.swift */,
 				C6CFB5681BAE1A71005ED203 /* Main.storyboard */,
 				C6CFB56B1BAE1A71005ED203 /* Images.xcassets */,
 				C6CFB56D1BAE1A71005ED203 /* LaunchScreen.xib */,
@@ -156,7 +163,8 @@
 		C6CFB5571BAE1A71005ED203 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Jason Shapiro";
 				TargetAttributes = {
 					C6CFB55E1BAE1A71005ED203 = {
@@ -212,7 +220,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6CFB5671BAE1A71005ED203 /* ViewController.swift in Sources */,
+				C66A17601BB87205001A5602 /* KeychainInternetPasswordViewController.swift in Sources */,
+				C6CFB5671BAE1A71005ED203 /* KeychainPasswordViewController.swift in Sources */,
 				C6CFB5651BAE1A71005ED203 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +285,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -291,7 +301,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -330,7 +340,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -344,6 +354,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KeychainTouchIdDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.intertech.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -354,6 +365,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KeychainTouchIdDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.intertech.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -372,6 +384,7 @@
 				);
 				INFOPLIST_FILE = KeychainTouchIdDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.intertech.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeychainTouchIdDemo.app/KeychainTouchIdDemo";
 			};
@@ -387,6 +400,7 @@
 				);
 				INFOPLIST_FILE = KeychainTouchIdDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.intertech.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeychainTouchIdDemo.app/KeychainTouchIdDemo";
 			};
@@ -411,6 +425,7 @@
 				C6CFB5801BAE1A71005ED203 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6CFB5811BAE1A71005ED203 /* Build configuration list for PBXNativeTarget "KeychainTouchIdDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +434,7 @@
 				C6CFB5831BAE1A71005ED203 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
