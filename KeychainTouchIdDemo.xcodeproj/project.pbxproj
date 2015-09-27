@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C66A17601BB87205001A5602 /* KeychainInternetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A175F1BB87205001A5602 /* KeychainInternetPasswordViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		C66A17621BB88ABE001A5602 /* TouchIDAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A17611BB88ABE001A5602 /* TouchIDAuthViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		C66A17641BB89FA5001A5602 /* LAContextDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A17631BB89FA5001A5602 /* LAContextDemoViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		C66A17661BB8A036001A5602 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66A17651BB8A036001A5602 /* LocalAuthentication.framework */; };
 		C68631361BAF402700F8A291 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68631351BAF402700F8A291 /* Security.framework */; };
 		C6CFB5651BAE1A71005ED203 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFB5641BAE1A71005ED203 /* AppDelegate.swift */; };
 		C6CFB5671BAE1A71005ED203 /* KeychainPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFB5661BAE1A71005ED203 /* KeychainPasswordViewController.swift */; };
@@ -29,6 +32,9 @@
 
 /* Begin PBXFileReference section */
 		C66A175F1BB87205001A5602 /* KeychainInternetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainInternetPasswordViewController.swift; sourceTree = "<group>"; };
+		C66A17611BB88ABE001A5602 /* TouchIDAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchIDAuthViewController.swift; sourceTree = "<group>"; };
+		C66A17631BB89FA5001A5602 /* LAContextDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LAContextDemoViewController.swift; sourceTree = "<group>"; };
+		C66A17651BB8A036001A5602 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		C68631351BAF402700F8A291 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C6CFB55F1BAE1A71005ED203 /* KeychainTouchIdDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeychainTouchIdDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6CFB5631BAE1A71005ED203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C66A17661BB8A036001A5602 /* LocalAuthentication.framework in Frameworks */,
 				C68631361BAF402700F8A291 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,6 +71,7 @@
 		C6CFB5561BAE1A71005ED203 = {
 			isa = PBXGroup;
 			children = (
+				C66A17651BB8A036001A5602 /* LocalAuthentication.framework */,
 				C68631351BAF402700F8A291 /* Security.framework */,
 				C6CFB5611BAE1A71005ED203 /* KeychainTouchIdDemo */,
 				C6CFB5771BAE1A71005ED203 /* KeychainTouchIdDemoTests */,
@@ -84,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				C6CFB5641BAE1A71005ED203 /* AppDelegate.swift */,
+				C66A17631BB89FA5001A5602 /* LAContextDemoViewController.swift */,
+				C66A17611BB88ABE001A5602 /* TouchIDAuthViewController.swift */,
 				C6CFB5661BAE1A71005ED203 /* KeychainPasswordViewController.swift */,
 				C66A175F1BB87205001A5602 /* KeychainInternetPasswordViewController.swift */,
 				C6CFB5681BAE1A71005ED203 /* Main.storyboard */,
@@ -220,9 +230,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C66A17641BB89FA5001A5602 /* LAContextDemoViewController.swift in Sources */,
 				C66A17601BB87205001A5602 /* KeychainInternetPasswordViewController.swift in Sources */,
 				C6CFB5671BAE1A71005ED203 /* KeychainPasswordViewController.swift in Sources */,
 				C6CFB5651BAE1A71005ED203 /* AppDelegate.swift in Sources */,
+				C66A17621BB88ABE001A5602 /* TouchIDAuthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

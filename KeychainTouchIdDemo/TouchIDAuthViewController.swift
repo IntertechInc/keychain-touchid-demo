@@ -1,33 +1,37 @@
 //
-//  KeychainPasswordViewController.swift
-//  KeychainTouchIdDemo #2
+//  TouchIDAuthViewController.swift
+//  KeychainTouchIdDemo #4
 //
 //  Demo Code - Intertech - http://www.intertech.com
-//  Generic Password CRUD (Retrieve single "secret")
+//  ACL on Keychain Item which forces Touch ID / Passcode authentication
+//  (if the user has either enabled)
 
 import UIKit
 import Security
 
-class KeychainPasswordViewController: UIViewController {
-
+class TouchIDAuthViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
 
-
-    @IBAction func textFieldLoad(sender: AnyObject) {
+    @IBAction func loadPassword(sender: UIButton) {
         if let password = retrievePassword() {
             passwordField.text = password;
         }
     }
     
-    @IBAction func textFieldSave(sender: AnyObject) {
-
+    
+    @IBAction func savePassword(sender: UIButton) {
+        let secAC = SecAccessControlCreateWithFlags(kCFAllocatorDefault,kSecAttrAccessibleWhenUnlocked, .UserPresence, nil)
+        
         let passwordData: NSData = passwordField.text!.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
         
         let attrs : [NSObject : AnyObject] = [
             kSecClass: kSecClassGenericPassword,
-            kSecAttrService : "Intertech",
+            kSecAttrService : "IntertechSecure",
             kSecAttrAccount : "Instructor",
-            kSecValueData : passwordData
+            kSecValueData : passwordData,
+            kSecAttrAccessControl : secAC!,
+            kSecUseOperationPrompt : "Touch ID Demo"
+
         ]
         
         SecItemDelete(attrs)
@@ -35,16 +39,15 @@ class KeychainPasswordViewController: UIViewController {
         if resultCode != errSecSuccess {
             print("Unable to Add Password to Keychain.  Error Code: \(resultCode)")
         } else {
-            print("Successfully added \(passwordField.text)")
+            print("Successfully added \(passwordField.text!)")
         }
         passwordField.text = ""
     }
     
-    @IBAction func deleteEntry(sender: AnyObject) {
-        
+    @IBAction func deletePassword(sender: UIButton) {
         let attrs : [NSObject : AnyObject] = [
             kSecClass: kSecClassGenericPassword,
-            kSecAttrService : "Intertech",
+            kSecAttrService : "IntertechSecure",
             kSecAttrAccount : "Instructor"
         ]
         
@@ -54,7 +57,7 @@ class KeychainPasswordViewController: UIViewController {
     func retrievePassword() -> String? {
         let attrs : [NSObject:AnyObject] = [
             kSecClass : kSecClassGenericPassword,
-            kSecAttrService : "Intertech",
+            kSecAttrService : "IntertechSecure",
             kSecAttrAccount : "Instructor",
             kSecReturnData : kCFBooleanTrue
         ]
@@ -66,11 +69,24 @@ class KeychainPasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
