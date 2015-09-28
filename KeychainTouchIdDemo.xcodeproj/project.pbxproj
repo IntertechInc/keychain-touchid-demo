@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C62C80681BB9C79400FC6994 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C80671BB9C79400FC6994 /* AppDelegate.swift */; };
-		C62C806A1BB9C79400FC6994 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C80691BB9C79400FC6994 /* ViewController.swift */; };
 		C62C80721BB9C79400FC6994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62C80701BB9C79400FC6994 /* LaunchScreen.storyboard */; };
 		C66A17601BB87205001A5602 /* KeychainInternetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A175F1BB87205001A5602 /* KeychainInternetPasswordViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C66A17621BB88ABE001A5602 /* TouchIDAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A17611BB88ABE001A5602 /* TouchIDAuthViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -16,6 +15,7 @@
 		C6B8B72F1BB9C8BD00B8664F /* Sharing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B8B72D1BB9C8BD00B8664F /* Sharing.storyboard */; settings = {ASSET_TAGS = (); }; };
 		C6B8B7311BB9C96F00B8664F /* KeychainPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFB5661BAE1A71005ED203 /* KeychainPasswordViewController.swift */; };
 		C6B8B7341BB9CAFF00B8664F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6CFB56B1BAE1A71005ED203 /* Images.xcassets */; };
+		C6B8B73D1BB9E1AD00B8664F /* Sharing-ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = C6B8B73C1BB9E1AD00B8664F /* Sharing-ReadMe.txt */; settings = {ASSET_TAGS = (); }; };
 		C6CFB5651BAE1A71005ED203 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFB5641BAE1A71005ED203 /* AppDelegate.swift */; };
 		C6CFB5671BAE1A71005ED203 /* KeychainPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFB5661BAE1A71005ED203 /* KeychainPasswordViewController.swift */; };
 		C6CFB56A1BAE1A71005ED203 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6CFB5681BAE1A71005ED203 /* Main.storyboard */; };
@@ -26,13 +26,13 @@
 /* Begin PBXFileReference section */
 		C62C80651BB9C79400FC6994 /* KeychainItemSharingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeychainItemSharingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62C80671BB9C79400FC6994 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C62C80691BB9C79400FC6994 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C62C80711BB9C79400FC6994 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C62C80731BB9C79400FC6994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C66A175F1BB87205001A5602 /* KeychainInternetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainInternetPasswordViewController.swift; sourceTree = "<group>"; };
 		C66A17611BB88ABE001A5602 /* TouchIDAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchIDAuthViewController.swift; sourceTree = "<group>"; };
 		C66A17631BB89FA5001A5602 /* LAContextDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LAContextDemoViewController.swift; sourceTree = "<group>"; };
 		C6B8B72E1BB9C8BD00B8664F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Sharing.storyboard; sourceTree = "<group>"; };
+		C6B8B73C1BB9E1AD00B8664F /* Sharing-ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Sharing-ReadMe.txt"; sourceTree = "<group>"; };
 		C6CFB55F1BAE1A71005ED203 /* KeychainTouchIdDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeychainTouchIdDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6CFB5631BAE1A71005ED203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6CFB5641BAE1A71005ED203 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,9 +65,9 @@
 			children = (
 				C6B8B72D1BB9C8BD00B8664F /* Sharing.storyboard */,
 				C62C80671BB9C79400FC6994 /* AppDelegate.swift */,
-				C62C80691BB9C79400FC6994 /* ViewController.swift */,
 				C62C80701BB9C79400FC6994 /* LaunchScreen.storyboard */,
 				C62C80731BB9C79400FC6994 /* Info.plist */,
+				C6B8B73C1BB9E1AD00B8664F /* Sharing-ReadMe.txt */,
 			);
 			path = KeychainItemSharingDemo;
 			sourceTree = "<group>";
@@ -196,6 +196,7 @@
 				C6B8B7341BB9CAFF00B8664F /* Images.xcassets in Resources */,
 				C62C80721BB9C79400FC6994 /* LaunchScreen.storyboard in Resources */,
 				C6B8B72F1BB9C8BD00B8664F /* Sharing.storyboard in Resources */,
+				C6B8B73D1BB9E1AD00B8664F /* Sharing-ReadMe.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +218,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6B8B7311BB9C96F00B8664F /* KeychainPasswordViewController.swift in Sources */,
-				C62C806A1BB9C79400FC6994 /* ViewController.swift in Sources */,
 				C62C80681BB9C79400FC6994 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
