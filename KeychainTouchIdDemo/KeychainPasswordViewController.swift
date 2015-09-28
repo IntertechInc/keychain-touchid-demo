@@ -51,6 +51,7 @@ class KeychainPasswordViewController: UIViewController {
             print("Unable to Add Password to Keychain.  Error Code: \(resultCode)")
         }
         passwordField.text = ""
+        passwordField.resignFirstResponder()
     }
     
     @IBAction func deleteEntry(sender: AnyObject) {

@@ -55,6 +55,7 @@ class TouchIDAuthViewController: UIViewController {
             print("Successfully added \(passwordField.text!)")
         }
         passwordField.text = ""
+        passwordField.resignFirstResponder()
     }
     
     @IBAction func deletePassword(sender: UIButton) {

@@ -51,10 +51,9 @@ class KeychainInternetPasswordViewController: UIViewController {
         if resultCode != errSecSuccess {
             print("Unable to Add Internet Data to Keychain.  Error Code: \(resultCode)")
         } else {
+            clearFieldsAndRemoveKeyboard()
             print("Successfully Added Internet Data")
         }
-        
-        
     }
     
     @IBAction func load(sender: AnyObject) {
@@ -67,7 +66,7 @@ class KeychainInternetPasswordViewController: UIViewController {
             let pathStr = internetData[NSString(format: kSecAttrPath)]
             let passwordData = internetData[NSString(format: kSecValueData)]
             // Convert NSData to String
-            let password = String(data: (passwordData as! NSData) ?? NSData(), encoding: NSUTF8StringEncoding)
+            let password = String(data: (passwordData as? NSData) ?? NSData(), encoding: NSUTF8StringEncoding)
             displayField.text = "\(protocolStr!)\(serverStr!)\(pathStr!) : \(password!)"
         }
     }
@@ -89,8 +88,19 @@ class KeychainInternetPasswordViewController: UIViewController {
         // Because we specified that we wanted the attributes, 
         // the address to a dictionary pointer is used instead of an NSData object.
         SecItemCopyMatching(attrs, &dictionaryRef)
-        let dictionary = dictionaryRef as! NSDictionary
-        return dictionary
+        if let dictionary = dictionaryRef as? NSDictionary {
+            return dictionary
+        } else {
+            return nil
+        }
+    }
+    
+    func clearFieldsAndRemoveKeyboard() -> Void {
+        protocolField.text = ""
+        serverField.text = ""
+        pathField.text = ""
+        passwordField.text = ""
+        self.view.endEditing(true)
     }
     
     
