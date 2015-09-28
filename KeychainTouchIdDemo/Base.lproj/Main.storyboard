@@ -233,21 +233,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrR-Xt-lXE">
-                                <rect key="frame" x="151" y="202" width="299" height="196"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrR-Xt-lXE">
+                                <rect key="frame" x="20" y="202" width="560" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="196" id="U1d-fe-Xyu"/>
-                                    <constraint firstAttribute="width" constant="299" id="wkA-xQ-xx7"/>
+                                    <constraint firstAttribute="height" constant="44" id="zO7-fW-ZHh"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IntertechLogo" translatesAutoresizingMaskIntoConstraints="NO" id="dcV-n4-hYu">
+                                <rect key="frame" x="161" y="28" width="278" height="116"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuW-T9-lGx">
+                                <rect key="frame" x="245" y="152" width="110" height="30"/>
+                                <state key="normal" title="Login Challenge"/>
+                                <connections>
+                                    <action selector="loginChallenge:" destination="ZBo-bD-tc8" eventType="touchUpInside" id="dSL-7X-Xje"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DrR-Xt-lXE" firstAttribute="centerY" secondItem="Njk-uf-UaY" secondAttribute="centerY" id="QcN-2i-miH"/>
-                            <constraint firstItem="DrR-Xt-lXE" firstAttribute="centerX" secondItem="Njk-uf-UaY" secondAttribute="centerX" id="csX-qa-ofq"/>
+                            <constraint firstItem="dcV-n4-hYu" firstAttribute="top" secondItem="BxW-BT-HpB" secondAttribute="bottom" constant="8" id="W0P-hh-UW2"/>
+                            <constraint firstItem="MuW-T9-lGx" firstAttribute="centerX" secondItem="Njk-uf-UaY" secondAttribute="centerX" id="a51-hY-oXu"/>
+                            <constraint firstItem="MuW-T9-lGx" firstAttribute="top" secondItem="dcV-n4-hYu" secondAttribute="bottom" constant="8" id="dHq-Mn-wh8"/>
+                            <constraint firstItem="dcV-n4-hYu" firstAttribute="centerX" secondItem="Njk-uf-UaY" secondAttribute="centerX" id="mG5-BK-Ywg"/>
+                            <constraint firstItem="DrR-Xt-lXE" firstAttribute="top" secondItem="dcV-n4-hYu" secondAttribute="bottom" constant="58" id="oka-In-Tnn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DrR-Xt-lXE" secondAttribute="trailing" id="pLm-oT-6Yt"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="DrR-Xt-lXE" secondAttribute="leading" id="rMO-xy-WqL"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Local Auth" id="VMf-5I-B9F"/>

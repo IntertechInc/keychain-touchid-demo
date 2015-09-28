@@ -12,14 +12,7 @@ class LAContextDemoViewController: UIViewController {
 
     @IBOutlet weak var status: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
+    @IBAction func loginChallenge(sender: AnyObject) {
         let localAuthContext = LAContext()
         var error : NSError?
         if localAuthContext.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthentication, error: &error) {
@@ -34,21 +27,19 @@ class LAContextDemoViewController: UIViewController {
             print("Passcode and TouchID not enabled")
         }
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
