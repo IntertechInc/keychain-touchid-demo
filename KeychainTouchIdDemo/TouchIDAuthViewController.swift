@@ -11,10 +11,12 @@ import Security
 
 class TouchIDAuthViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
+    
+        @IBOutlet weak var keychainField: UITextField!
 
     @IBAction func loadPassword(sender: UIButton) {
         if let password = retrievePassword() {
-            passwordField.text = password;
+            keychainField.text = password;
         }
     }
     

@@ -12,10 +12,11 @@ class KeychainPasswordViewController: UIViewController {
 
     @IBOutlet weak var passwordField: UITextField!
 
+    @IBOutlet weak var keychainField: UITextField!
 
     @IBAction func textFieldLoad(sender: AnyObject) {
         if let password = retrievePassword() {
-            passwordField.text = password;
+            keychainField.text = password;
         }
     }
     
@@ -34,8 +35,6 @@ class KeychainPasswordViewController: UIViewController {
         let resultCode = SecItemAdd(attrs as CFDictionaryRef, nil)
         if resultCode != errSecSuccess {
             print("Unable to Add Password to Keychain.  Error Code: \(resultCode)")
-        } else {
-            print("Successfully added \(passwordField.text)")
         }
         passwordField.text = ""
     }
