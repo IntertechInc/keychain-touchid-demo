@@ -341,6 +341,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcd-lz-OiE">
                                 <rect key="frame" x="535" y="296" width="45" height="30"/>
                                 <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deletePassword:" destination="r2q-bT-XTa" eventType="touchUpInside" id="G08-Dg-MC1"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keychain:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvj-4e-uB9">
                                 <rect key="frame" x="37" y="262" width="74" height="21"/>

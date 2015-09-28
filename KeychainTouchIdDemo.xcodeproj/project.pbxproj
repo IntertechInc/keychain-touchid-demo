@@ -93,9 +93,9 @@
 			children = (
 				C6CFB5641BAE1A71005ED203 /* AppDelegate.swift */,
 				C66A17631BB89FA5001A5602 /* LAContextDemoViewController.swift */,
-				C66A17611BB88ABE001A5602 /* TouchIDAuthViewController.swift */,
 				C6CFB5661BAE1A71005ED203 /* KeychainPasswordViewController.swift */,
 				C66A175F1BB87205001A5602 /* KeychainInternetPasswordViewController.swift */,
+				C66A17611BB88ABE001A5602 /* TouchIDAuthViewController.swift */,
 				C6CFB5681BAE1A71005ED203 /* Main.storyboard */,
 				C6CFB56B1BAE1A71005ED203 /* Images.xcassets */,
 				C6CFB56D1BAE1A71005ED203 /* LaunchScreen.xib */,
