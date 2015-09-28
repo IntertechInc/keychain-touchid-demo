@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>KeychainItemSharingDemo.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>KeychainTouchIdDemo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>C62C80641BB9C79400FC6994</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C6CFB55E1BAE1A71005ED203</key>
 		<dict>
 			<key>primary</key>

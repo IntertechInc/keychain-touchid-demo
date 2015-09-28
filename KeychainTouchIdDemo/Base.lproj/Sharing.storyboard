@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Generic Pwd-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="KeychainPasswordViewController" customModule="KeychainItemSharingDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNn-P1-oJT">
+                                <rect key="frame" x="32" y="168" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKR-1j-IWf">
+                                <rect key="frame" x="119" y="202" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="textFieldSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AK5-Zu-uOg"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="59q-QT-ntk">
+                                <rect key="frame" x="119" y="164" width="461" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QUW-ks-DUL">
+                                <rect key="frame" x="119" y="258" width="461" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IntertechLogo" translatesAutoresizingMaskIntoConstraints="NO" id="H9h-NV-VAM">
+                                <rect key="frame" x="161" y="28" width="278" height="116"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmA-1P-XN9">
+                                <rect key="frame" x="535" y="296" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteEntry:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T4I-Wh-LMa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keychain:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUW-RF-VbJ">
+                                <rect key="frame" x="37" y="262" width="74" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qc-7i-ksd">
+                                <rect key="frame" x="119" y="296" width="34" height="30"/>
+                                <state key="normal" title="Load"/>
+                                <connections>
+                                    <action selector="textFieldLoad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c5g-6j-dwx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                        <constraints>
+                            <constraint firstItem="6qc-7i-ksd" firstAttribute="leading" secondItem="QUW-ks-DUL" secondAttribute="leading" id="0rg-xd-rmE"/>
+                            <constraint firstItem="aUW-RF-VbJ" firstAttribute="top" secondItem="XKR-1j-IWf" secondAttribute="bottom" constant="30" id="AMh-jX-OJF"/>
+                            <constraint firstItem="NmA-1P-XN9" firstAttribute="trailing" secondItem="QUW-ks-DUL" secondAttribute="trailing" id="Dea-7h-Lgl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="59q-QT-ntk" secondAttribute="trailing" id="Iln-oI-VLy"/>
+                            <constraint firstItem="59q-QT-ntk" firstAttribute="centerY" secondItem="mNn-P1-oJT" secondAttribute="centerY" id="KPk-xh-ZYA"/>
+                            <constraint firstItem="NmA-1P-XN9" firstAttribute="top" secondItem="QUW-ks-DUL" secondAttribute="bottom" constant="8" id="WTt-MA-lr5"/>
+                            <constraint firstItem="H9h-NV-VAM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Wp4-LO-Vdc"/>
+                            <constraint firstItem="QUW-ks-DUL" firstAttribute="leading" secondItem="aUW-RF-VbJ" secondAttribute="trailing" constant="8" id="XIv-fk-Bnk"/>
+                            <constraint firstItem="6qc-7i-ksd" firstAttribute="top" secondItem="QUW-ks-DUL" secondAttribute="bottom" constant="8" id="Z6Y-m4-SIV"/>
+                            <constraint firstItem="QUW-ks-DUL" firstAttribute="centerY" secondItem="aUW-RF-VbJ" secondAttribute="centerY" id="aBe-PA-I03"/>
+                            <constraint firstItem="mNn-P1-oJT" firstAttribute="top" secondItem="H9h-NV-VAM" secondAttribute="bottom" constant="24" id="c2y-Zs-hyw"/>
+                            <constraint firstItem="XKR-1j-IWf" firstAttribute="leading" secondItem="59q-QT-ntk" secondAttribute="leading" id="f96-7b-K6b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QUW-ks-DUL" secondAttribute="trailing" id="fvt-fq-17P"/>
+                            <constraint firstItem="59q-QT-ntk" firstAttribute="leading" secondItem="mNn-P1-oJT" secondAttribute="trailing" constant="8" id="idZ-MX-Wpm"/>
+                            <constraint firstItem="XKR-1j-IWf" firstAttribute="top" secondItem="59q-QT-ntk" secondAttribute="bottom" constant="8" id="jgw-CY-dS1"/>
+                            <constraint firstItem="aUW-RF-VbJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="17" id="qTi-xC-99R"/>
+                            <constraint firstItem="mNn-P1-oJT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="qko-JT-RVX"/>
+                            <constraint firstItem="H9h-NV-VAM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yEy-2I-GiG"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Generic Pwd" id="blV-Oq-OUw"/>
+                    <connections>
+                        <outlet property="keychainField" destination="QUW-ks-DUL" id="0mk-r2-QQJ"/>
+                        <outlet property="passwordField" destination="59q-QT-ntk" id="t6H-tq-UzC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-517" y="145"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IntertechLogo" width="278" height="116"/>
+    </resources>
+</document>

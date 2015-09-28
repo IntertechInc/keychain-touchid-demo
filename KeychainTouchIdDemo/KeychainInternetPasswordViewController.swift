@@ -7,7 +7,6 @@
 
 import UIKit
 // The SecItem API requires the Security framework
-// (don't forget to add this in the Target -> General -> Linked Frameworks & Libraries)
 import Security
 
 class KeychainInternetPasswordViewController: UIViewController {
@@ -15,7 +14,7 @@ class KeychainInternetPasswordViewController: UIViewController {
     @IBOutlet weak var serverField: UITextField!
     @IBOutlet weak var pathField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var displayField: UITextField!
+    @IBOutlet weak var keychainField: UITextField!
     
     @IBAction func save(sender: AnyObject) {
         
@@ -67,10 +66,30 @@ class KeychainInternetPasswordViewController: UIViewController {
             let passwordData = internetData[NSString(format: kSecValueData)]
             // Convert NSData to String
             let password = String(data: (passwordData as? NSData) ?? NSData(), encoding: NSUTF8StringEncoding)
-            displayField.text = "\(protocolStr!)\(serverStr!)\(pathStr!) : \(password!)"
+            keychainField.text = "\(protocolStr!)\(serverStr!)\(pathStr!) : \(password!)"
         }
     }
 
+    @IBAction func deleteItem(sender: UIButton) {
+        
+        // A dictionary of attributes to delete our Keychain Item(s).
+        // The fewer the attributes, the more items you could (unintentionally) match,
+        // so be careful!
+        let delAttrs : [NSObject:AnyObject] = [
+            kSecClass : kSecClassInternetPassword,
+            kSecAttrAccount : "Intertech"
+        ]
+        
+        // TODO: A best practice is to update an existing Keychain item,
+        // rather than delete -> add.  Rewrite to follow this pattern.
+        //
+        // To delete any existing Keychain Item for this Service/Account combination,
+        // pass in the Dictionary of attributes to SecItemDelete
+        SecItemDelete(delAttrs)
+        keychainField.text = ""
+    }
+    
+    
     func retrieveInternetData() -> NSDictionary? {
         // A dictionary of attributes to specify the Keychain Item for retrieval.
         let attrs : [NSObject:AnyObject] = [

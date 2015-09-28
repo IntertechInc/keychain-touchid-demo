@@ -7,7 +7,6 @@
 
 import UIKit
 // LAContext requires the LocalAuthentication framework
-// (don't forget to add this in the Target -> General -> Linked Frameworks & Libraries)
 import LocalAuthentication
 
 class LAContextDemoViewController: UIViewController {

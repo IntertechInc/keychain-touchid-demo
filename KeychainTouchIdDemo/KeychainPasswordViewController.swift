@@ -7,7 +7,6 @@
 
 import UIKit
 // The SecItem API requires the Security framework
-// (don't forget to add this in the Target -> General -> Linked Frameworks & Libraries)
 import Security
 
 class KeychainPasswordViewController: UIViewController {
@@ -65,6 +64,7 @@ class KeychainPasswordViewController: UIViewController {
         
         // Delete any Keychain Item(s) that match our attributes above.
         SecItemDelete(attrs)
+        keychainField.text = ""
     }
     
     func retrievePassword() -> String? {

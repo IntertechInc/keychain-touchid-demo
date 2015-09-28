@@ -7,58 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C62C80681BB9C79400FC6994 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C80671BB9C79400FC6994 /* AppDelegate.swift */; };
+		C62C806A1BB9C79400FC6994 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C80691BB9C79400FC6994 /* ViewController.swift */; };
+		C62C80721BB9C79400FC6994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62C80701BB9C79400FC6994 /* LaunchScreen.storyboard */; };
 		C66A17601BB87205001A5602 /* KeychainInternetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A175F1BB87205001A5602 /* KeychainInternetPasswordViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C66A17621BB88ABE001A5602 /* TouchIDAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A17611BB88ABE001A5602 /* TouchIDAuthViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C66A17641BB89FA5001A5602 /* LAContextDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66A17631BB89FA5001A5602 /* LAContextDemoViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		C66A17661BB8A036001A5602 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66A17651BB8A036001A5602 /* LocalAuthentication.framework */; };
-		C68631361BAF402700F8A291 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68631351BAF402700F8A291 /* Security.framework */; };
+		C6B8B72F1BB9C8BD00B8664F /* Sharing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B8B72D1BB9C8BD00B8664F /* Sharing.storyboard */; settings = {ASSET_TAGS = (); }; };
+		C6B8B7311BB9C96F00B8664F /* KeychainPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFB5661BAE1A71005ED203 /* KeychainPasswordViewController.swift */; };
+		C6B8B7341BB9CAFF00B8664F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6CFB56B1BAE1A71005ED203 /* Images.xcassets */; };
 		C6CFB5651BAE1A71005ED203 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFB5641BAE1A71005ED203 /* AppDelegate.swift */; };
 		C6CFB5671BAE1A71005ED203 /* KeychainPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFB5661BAE1A71005ED203 /* KeychainPasswordViewController.swift */; };
 		C6CFB56A1BAE1A71005ED203 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6CFB5681BAE1A71005ED203 /* Main.storyboard */; };
 		C6CFB56C1BAE1A71005ED203 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6CFB56B1BAE1A71005ED203 /* Images.xcassets */; };
 		C6CFB56F1BAE1A71005ED203 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6CFB56D1BAE1A71005ED203 /* LaunchScreen.xib */; };
-		C6CFB57B1BAE1A71005ED203 /* KeychainTouchIdDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFB57A1BAE1A71005ED203 /* KeychainTouchIdDemoTests.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C6CFB5751BAE1A71005ED203 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C6CFB5571BAE1A71005ED203 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C6CFB55E1BAE1A71005ED203;
-			remoteInfo = KeychainTouchIdDemo;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		C62C80651BB9C79400FC6994 /* KeychainItemSharingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeychainItemSharingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C62C80671BB9C79400FC6994 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C62C80691BB9C79400FC6994 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C62C80711BB9C79400FC6994 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C62C80731BB9C79400FC6994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C66A175F1BB87205001A5602 /* KeychainInternetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainInternetPasswordViewController.swift; sourceTree = "<group>"; };
 		C66A17611BB88ABE001A5602 /* TouchIDAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchIDAuthViewController.swift; sourceTree = "<group>"; };
 		C66A17631BB89FA5001A5602 /* LAContextDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LAContextDemoViewController.swift; sourceTree = "<group>"; };
-		C66A17651BB8A036001A5602 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
-		C68631351BAF402700F8A291 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C6B8B72E1BB9C8BD00B8664F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Sharing.storyboard; sourceTree = "<group>"; };
 		C6CFB55F1BAE1A71005ED203 /* KeychainTouchIdDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeychainTouchIdDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6CFB5631BAE1A71005ED203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6CFB5641BAE1A71005ED203 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C6CFB5661BAE1A71005ED203 /* KeychainPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainPasswordViewController.swift; sourceTree = "<group>"; };
+		C6CFB5661BAE1A71005ED203 /* KeychainPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeychainPasswordViewController.swift; path = KeychainTouchIdDemo/KeychainPasswordViewController.swift; sourceTree = "<group>"; };
 		C6CFB5691BAE1A71005ED203 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C6CFB56B1BAE1A71005ED203 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C6CFB56B1BAE1A71005ED203 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = KeychainTouchIdDemo/Images.xcassets; sourceTree = "<group>"; };
 		C6CFB56E1BAE1A71005ED203 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		C6CFB5741BAE1A71005ED203 /* KeychainTouchIdDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeychainTouchIdDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6CFB5791BAE1A71005ED203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C6CFB57A1BAE1A71005ED203 /* KeychainTouchIdDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainTouchIdDemoTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C6CFB55C1BAE1A71005ED203 /* Frameworks */ = {
+		C62C80621BB9C79400FC6994 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C66A17661BB8A036001A5602 /* LocalAuthentication.framework in Frameworks */,
-				C68631361BAF402700F8A291 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C6CFB5711BAE1A71005ED203 /* Frameworks */ = {
+		C6CFB55C1BAE1A71005ED203 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -68,13 +60,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C62C80661BB9C79400FC6994 /* KeychainItemSharingDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C6B8B72D1BB9C8BD00B8664F /* Sharing.storyboard */,
+				C62C80671BB9C79400FC6994 /* AppDelegate.swift */,
+				C62C80691BB9C79400FC6994 /* ViewController.swift */,
+				C62C80701BB9C79400FC6994 /* LaunchScreen.storyboard */,
+				C62C80731BB9C79400FC6994 /* Info.plist */,
+			);
+			path = KeychainItemSharingDemo;
+			sourceTree = "<group>";
+		};
+		C6B8B7331BB9CA7200B8664F /* Shared Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C6CFB5661BAE1A71005ED203 /* KeychainPasswordViewController.swift */,
+				C6CFB56B1BAE1A71005ED203 /* Images.xcassets */,
+			);
+			name = "Shared Resources";
+			sourceTree = "<group>";
+		};
 		C6CFB5561BAE1A71005ED203 = {
 			isa = PBXGroup;
 			children = (
-				C66A17651BB8A036001A5602 /* LocalAuthentication.framework */,
-				C68631351BAF402700F8A291 /* Security.framework */,
+				C6B8B7331BB9CA7200B8664F /* Shared Resources */,
 				C6CFB5611BAE1A71005ED203 /* KeychainTouchIdDemo */,
-				C6CFB5771BAE1A71005ED203 /* KeychainTouchIdDemoTests */,
+				C62C80661BB9C79400FC6994 /* KeychainItemSharingDemo */,
 				C6CFB5601BAE1A71005ED203 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -83,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				C6CFB55F1BAE1A71005ED203 /* KeychainTouchIdDemo.app */,
-				C6CFB5741BAE1A71005ED203 /* KeychainTouchIdDemoTests.xctest */,
+				C62C80651BB9C79400FC6994 /* KeychainItemSharingDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,45 +105,35 @@
 			children = (
 				C6CFB5641BAE1A71005ED203 /* AppDelegate.swift */,
 				C66A17631BB89FA5001A5602 /* LAContextDemoViewController.swift */,
-				C6CFB5661BAE1A71005ED203 /* KeychainPasswordViewController.swift */,
 				C66A175F1BB87205001A5602 /* KeychainInternetPasswordViewController.swift */,
 				C66A17611BB88ABE001A5602 /* TouchIDAuthViewController.swift */,
 				C6CFB5681BAE1A71005ED203 /* Main.storyboard */,
-				C6CFB56B1BAE1A71005ED203 /* Images.xcassets */,
 				C6CFB56D1BAE1A71005ED203 /* LaunchScreen.xib */,
-				C6CFB5621BAE1A71005ED203 /* Supporting Files */,
-			);
-			path = KeychainTouchIdDemo;
-			sourceTree = "<group>";
-		};
-		C6CFB5621BAE1A71005ED203 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
 				C6CFB5631BAE1A71005ED203 /* Info.plist */,
 			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		C6CFB5771BAE1A71005ED203 /* KeychainTouchIdDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				C6CFB57A1BAE1A71005ED203 /* KeychainTouchIdDemoTests.swift */,
-				C6CFB5781BAE1A71005ED203 /* Supporting Files */,
-			);
-			path = KeychainTouchIdDemoTests;
-			sourceTree = "<group>";
-		};
-		C6CFB5781BAE1A71005ED203 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C6CFB5791BAE1A71005ED203 /* Info.plist */,
-			);
-			name = "Supporting Files";
+			path = KeychainTouchIdDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C62C80641BB9C79400FC6994 /* KeychainItemSharingDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C62C80761BB9C79400FC6994 /* Build configuration list for PBXNativeTarget "KeychainItemSharingDemo" */;
+			buildPhases = (
+				C62C80611BB9C79400FC6994 /* Sources */,
+				C62C80621BB9C79400FC6994 /* Frameworks */,
+				C62C80631BB9C79400FC6994 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeychainItemSharingDemo;
+			productName = KeychainItemSharingDemo;
+			productReference = C62C80651BB9C79400FC6994 /* KeychainItemSharingDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 		C6CFB55E1BAE1A71005ED203 /* KeychainTouchIdDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6CFB57E1BAE1A71005ED203 /* Build configuration list for PBXNativeTarget "KeychainTouchIdDemo" */;
@@ -149,24 +151,6 @@
 			productReference = C6CFB55F1BAE1A71005ED203 /* KeychainTouchIdDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C6CFB5731BAE1A71005ED203 /* KeychainTouchIdDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C6CFB5811BAE1A71005ED203 /* Build configuration list for PBXNativeTarget "KeychainTouchIdDemoTests" */;
-			buildPhases = (
-				C6CFB5701BAE1A71005ED203 /* Sources */,
-				C6CFB5711BAE1A71005ED203 /* Frameworks */,
-				C6CFB5721BAE1A71005ED203 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C6CFB5761BAE1A71005ED203 /* PBXTargetDependency */,
-			);
-			name = KeychainTouchIdDemoTests;
-			productName = KeychainTouchIdDemoTests;
-			productReference = C6CFB5741BAE1A71005ED203 /* KeychainTouchIdDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -177,12 +161,11 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Jason Shapiro";
 				TargetAttributes = {
+					C62C80641BB9C79400FC6994 = {
+						CreatedOnToolsVersion = 7.0;
+					};
 					C6CFB55E1BAE1A71005ED203 = {
 						CreatedOnToolsVersion = 6.4;
-					};
-					C6CFB5731BAE1A71005ED203 = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = C6CFB55E1BAE1A71005ED203;
 					};
 				};
 			};
@@ -200,12 +183,22 @@
 			projectRoot = "";
 			targets = (
 				C6CFB55E1BAE1A71005ED203 /* KeychainTouchIdDemo */,
-				C6CFB5731BAE1A71005ED203 /* KeychainTouchIdDemoTests */,
+				C62C80641BB9C79400FC6994 /* KeychainItemSharingDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C62C80631BB9C79400FC6994 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6B8B7341BB9CAFF00B8664F /* Images.xcassets in Resources */,
+				C62C80721BB9C79400FC6994 /* LaunchScreen.storyboard in Resources */,
+				C6B8B72F1BB9C8BD00B8664F /* Sharing.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C6CFB55D1BAE1A71005ED203 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,16 +209,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C6CFB5721BAE1A71005ED203 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C62C80611BB9C79400FC6994 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6B8B7311BB9C96F00B8664F /* KeychainPasswordViewController.swift in Sources */,
+				C62C806A1BB9C79400FC6994 /* ViewController.swift in Sources */,
+				C62C80681BB9C79400FC6994 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C6CFB55B1BAE1A71005ED203 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -238,25 +234,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C6CFB5701BAE1A71005ED203 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C6CFB57B1BAE1A71005ED203 /* KeychainTouchIdDemoTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		C6CFB5761BAE1A71005ED203 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C6CFB55E1BAE1A71005ED203 /* KeychainTouchIdDemo */;
-			targetProxy = C6CFB5751BAE1A71005ED203 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
+		C62C80701BB9C79400FC6994 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C62C80711BB9C79400FC6994 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C6B8B72D1BB9C8BD00B8664F /* Sharing.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6B8B72E1BB9C8BD00B8664F /* Base */,
+			);
+			name = Sharing.storyboard;
+			path = ../KeychainTouchIdDemo;
+			sourceTree = "<group>";
+		};
 		C6CFB5681BAE1A71005ED203 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -276,6 +273,29 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C62C80741BB9C79400FC6994 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = KeychainItemSharingDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.intertech.KeychainItemSharingDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C62C80751BB9C79400FC6994 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KeychainItemSharingDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.intertech.KeychainItemSharingDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		C6CFB57C1BAE1A71005ED203 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -382,45 +402,18 @@
 			};
 			name = Release;
 		};
-		C6CFB5821BAE1A71005ED203 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = KeychainTouchIdDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.intertech.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeychainTouchIdDemo.app/KeychainTouchIdDemo";
-			};
-			name = Debug;
-		};
-		C6CFB5831BAE1A71005ED203 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = KeychainTouchIdDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.intertech.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeychainTouchIdDemo.app/KeychainTouchIdDemo";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C62C80761BB9C79400FC6994 /* Build configuration list for PBXNativeTarget "KeychainItemSharingDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C62C80741BB9C79400FC6994 /* Debug */,
+				C62C80751BB9C79400FC6994 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C6CFB55A1BAE1A71005ED203 /* Build configuration list for PBXProject "KeychainTouchIdDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -435,15 +428,6 @@
 			buildConfigurations = (
 				C6CFB57F1BAE1A71005ED203 /* Debug */,
 				C6CFB5801BAE1A71005ED203 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C6CFB5811BAE1A71005ED203 /* Build configuration list for PBXNativeTarget "KeychainTouchIdDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C6CFB5821BAE1A71005ED203 /* Debug */,
-				C6CFB5831BAE1A71005ED203 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

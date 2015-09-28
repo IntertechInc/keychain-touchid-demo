@@ -132,7 +132,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gch-Ci-6p1">
-                                <rect key="frame" x="106.5" y="189" width="463.5" height="30"/>
+                                <rect key="frame" x="106" y="189" width="463.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -148,11 +148,6 @@
                                     <action selector="save:" destination="Rx9-Xb-wgR" eventType="touchUpInside" id="1Dv-YF-eNt"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z6v-Sz-k0i">
-                                <rect key="frame" x="20" y="356" width="555" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Server:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Sx-QP-sss">
                                 <rect key="frame" x="44" y="192" width="54.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -174,6 +169,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qd-r3-dnZ">
+                                <rect key="frame" x="530" y="394" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteItem:" destination="Rx9-Xb-wgR" eventType="touchUpInside" id="NNx-iS-kHM"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z6v-Sz-k0i">
+                                <rect key="frame" x="20" y="356" width="555" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -191,6 +198,8 @@
                             <constraint firstItem="MqS-nr-mCp" firstAttribute="trailing" secondItem="8Sx-QP-sss" secondAttribute="trailing" id="PVy-0q-gbK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="x03-BZ-RZI" secondAttribute="trailing" constant="10" id="Sh5-24-aJ3"/>
                             <constraint firstItem="Gch-Ci-6p1" firstAttribute="centerY" secondItem="8Sx-QP-sss" secondAttribute="centerY" constant="1.75" id="T4S-4U-Hgd"/>
+                            <constraint firstItem="6qd-r3-dnZ" firstAttribute="trailing" secondItem="Z6v-Sz-k0i" secondAttribute="trailing" id="TlP-cV-IPT"/>
+                            <constraint firstItem="6qd-r3-dnZ" firstAttribute="top" secondItem="Z6v-Sz-k0i" secondAttribute="bottom" constant="8" id="Tpx-2d-xYO"/>
                             <constraint firstItem="MqS-nr-mCp" firstAttribute="top" secondItem="Gch-Ci-6p1" secondAttribute="bottom" constant="12.5" id="V5o-C1-bq6"/>
                             <constraint firstItem="x03-BZ-RZI" firstAttribute="leading" secondItem="MqS-nr-mCp" secondAttribute="trailing" constant="7.5" id="VnH-kx-hgh"/>
                             <constraint firstItem="8zG-TR-XFm" firstAttribute="trailing" secondItem="MqS-nr-mCp" secondAttribute="trailing" id="XHv-Yh-mVZ"/>
@@ -210,7 +219,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Internet Pwd" id="YTa-D2-EA3"/>
                     <connections>
-                        <outlet property="displayField" destination="Z6v-Sz-k0i" id="G7b-qe-z3q"/>
+                        <outlet property="keychainField" destination="Z6v-Sz-k0i" id="8oM-vo-7Mx"/>
                         <outlet property="passwordField" destination="oeh-OC-t1J" id="aiz-mr-a3d"/>
                         <outlet property="pathField" destination="x03-BZ-RZI" id="IAm-ow-U6K"/>
                         <outlet property="protocolField" destination="Yiw-oJ-XjS" id="fNz-wL-CGi"/>
