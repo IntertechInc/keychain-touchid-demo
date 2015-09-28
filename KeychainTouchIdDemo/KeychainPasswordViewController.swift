@@ -35,7 +35,7 @@ class KeychainPasswordViewController: UIViewController {
         ]
         
         // TODO: A best practice is to update an existing Keychain item, 
-        // rather than delete -> add.  Update this code to follow this pattern.
+        // rather than delete -> add.  Rewrite to follow this pattern.
         //
         // To delete any existing Keychain Item for this Service/Account combination,
         // pass in the Dictionary of attributes to SecItemDelete
