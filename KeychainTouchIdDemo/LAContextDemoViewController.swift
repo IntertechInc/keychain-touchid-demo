@@ -35,7 +35,7 @@ class LAContextDemoViewController: UIViewController {
             })
             
         } else {
-            print("Passcode and TouchID not enabled")
+            status.text = "Passcode and TouchID not enabled"
         }
     }
     

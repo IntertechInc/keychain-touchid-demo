@@ -47,7 +47,7 @@ class KeychainPasswordViewController: UIViewController {
         // this type of class), etc.
         let resultCode = SecItemAdd(attrs, nil)
         if resultCode != errSecSuccess {
-            print("Unable to Add Password to Keychain.  Error Code: \(resultCode)")
+            keychainField.text = "Unable to Add Password to Keychain.  Error Code: \(resultCode)"
         }
         passwordField.text = ""
         passwordField.resignFirstResponder()

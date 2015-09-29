@@ -49,9 +49,9 @@ class TouchIDAuthViewController: UIViewController {
         SecItemDelete(attrs)
         let resultCode = SecItemAdd(attrs, nil)
         if resultCode != errSecSuccess {
-            print("Unable to Add Password to Keychain.  Error Code: \(resultCode)")
+            keychainField.text = "Unable to Add Password to Keychain.  Error Code: \(resultCode)"
         } else {
-            print("Successfully added \(passwordField.text!)")
+            keychainField.text = "Successfully added \(passwordField.text!)"
         }
         passwordField.text = ""
         passwordField.resignFirstResponder()

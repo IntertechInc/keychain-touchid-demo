@@ -48,10 +48,10 @@ class KeychainInternetPasswordViewController: UIViewController {
         
         let resultCode = SecItemAdd(attrs, nil)
         if resultCode != errSecSuccess {
-            print("Unable to Add Internet Data to Keychain.  Error Code: \(resultCode)")
+            keychainField.text = "Unable to Add Internet Data to Keychain.  Error Code: \(resultCode)"
         } else {
             clearFieldsAndRemoveKeyboard()
-            print("Successfully Added Internet Data")
+            keychainField.text = "Successfully Added Internet Data"
         }
     }
     
