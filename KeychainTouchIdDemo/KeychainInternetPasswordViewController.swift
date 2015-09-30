@@ -44,7 +44,7 @@ class KeychainInternetPasswordViewController: UIViewController {
             returnedAttrs[kSecValueData] = passwordData
             let resultCode = SecItemUpdate(searchAttrs, returnedAttrs)
             if resultCode != errSecSuccess {
-                keychainField.text = "Unable to Update Password in Keychain.  Error Code: \(resultCode)"
+                keychainField.text = "Error Code: \(resultCode)"
             } else {
                 clearFieldsAndRemoveKeyboard()
                 keychainField.text = "Successfully Added Internet Data"
@@ -58,7 +58,7 @@ class KeychainInternetPasswordViewController: UIViewController {
             searchAttrs[kSecValueData] = passwordData
             let resultCode = SecItemAdd(searchAttrs, nil)
             if resultCode != errSecSuccess {
-                keychainField.text = "Unable to Add Internet Data to Keychain.  Error Code: \(resultCode)"
+                keychainField.text = "Error Code: \(resultCode)"
             } else {
                 clearFieldsAndRemoveKeyboard()
                 keychainField.text = "Successfully Added Internet Data"
@@ -92,13 +92,13 @@ class KeychainInternetPasswordViewController: UIViewController {
         ]
         
         // To delete any existing Keychain Item for this Service/Account combination,
-        // pass in the Dictionary of attributes to SecItemDelete
-        let resultCode = SecItemDelete(delAttrs)
-        if resultCode != errSecSuccess {
-            keychainField.text = "Unable to Update Password in Keychain.  Error Code: \(resultCode)"
-        } else {
-            keychainField.text = ""
-        }
+        // pass in the Dictionary of attributes to SecItemDelete.
+        // For the simplicity of this demo, we'll ignore error codes
+        // ...something as simple as hitting the delete button twice
+        // will cause an error, which we don't need to worry about.
+        SecItemDelete(delAttrs)
+        keychainField.text = ""
+
     }
     
     

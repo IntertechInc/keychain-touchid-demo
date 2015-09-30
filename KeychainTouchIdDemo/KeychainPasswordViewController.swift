@@ -44,7 +44,7 @@ class KeychainPasswordViewController: UIViewController {
             returnedAttrs[kSecValueData] = passwordData
             let resultCode = SecItemUpdate(searchAttrs, returnedAttrs)
             if resultCode != errSecSuccess {
-                keychainField.text = "Unable to Update Password in Keychain.  Error Code: \(resultCode)"
+                keychainField.text = "Error Code: \(resultCode)"
             }
         } else {
             // Add the Keychain Item by passing in the Dictionary of attributes.
@@ -58,7 +58,7 @@ class KeychainPasswordViewController: UIViewController {
             searchAttrs[kSecValueData] = passwordData
             let resultCode = SecItemAdd(searchAttrs, nil)
             if resultCode != errSecSuccess {
-                keychainField.text = "Unable to Add Password to Keychain.  Error Code: \(resultCode)"
+                keychainField.text = "Error Code: \(resultCode)"
             }
         }
         passwordField.text = ""
@@ -68,20 +68,18 @@ class KeychainPasswordViewController: UIViewController {
     @IBAction func deletePassword(sender: AnyObject) {
         
         // A dictionary of attributes for our Keychain Item.
-        let attrs : [NSObject : AnyObject] = [
+        let delAttrs : [NSObject : AnyObject] = [
             kSecClass: kSecClassGenericPassword,
             kSecAttrService : "Intertech",
             kSecAttrAccount : "Instructor"
         ]
         
         // Delete any Keychain Item(s) that match our attributes above.
-        let resultCode = SecItemDelete(attrs)
-
-        if resultCode != errSecSuccess {
-            keychainField.text = "Unable to Update Password in Keychain.  Error Code: \(resultCode)"
-        } else {
-            keychainField.text = ""
-        }
+        // For the simplicity of this demo, we'll ignore error codes
+        // ...something as simple as hitting the delete button twice
+        // will cause an error, which we don't need to worry about.
+        SecItemDelete(delAttrs)
+        keychainField.text = ""
     }
     
     func retrievePassword() -> String? {
