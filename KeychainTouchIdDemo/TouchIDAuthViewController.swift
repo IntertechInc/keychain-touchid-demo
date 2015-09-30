@@ -44,8 +44,10 @@ class TouchIDAuthViewController: UIViewController {
 
         ]
         
-        // TODO: A best practice is to update an existing Keychain item,
-        // rather than delete -> add.  Rewrite to follow this pattern.
+        // Although it is better to do an update than a Delete -> Add,
+        // The ACL used would make the workflow a bit odd
+        // (i.e. a user would be challenged to authenticate when they
+        // update a key).
         SecItemDelete(attrs)
         let resultCode = SecItemAdd(attrs, nil)
         if resultCode != errSecSuccess {

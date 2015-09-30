@@ -27,7 +27,7 @@
                                 <rect key="frame" x="119" y="202" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
-                                    <action selector="textFieldSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AK5-Zu-uOg"/>
+                                    <action selector="savePassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="txA-cP-8Fv"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="59q-QT-ntk">
@@ -47,7 +47,7 @@
                                 <rect key="frame" x="535" y="296" width="45" height="30"/>
                                 <state key="normal" title="Delete"/>
                                 <connections>
-                                    <action selector="deleteEntry:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T4I-Wh-LMa"/>
+                                    <action selector="deletePassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UE3-MR-KT8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keychain:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUW-RF-VbJ">
@@ -60,7 +60,7 @@
                                 <rect key="frame" x="119" y="296" width="34" height="30"/>
                                 <state key="normal" title="Load"/>
                                 <connections>
-                                    <action selector="textFieldLoad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c5g-6j-dwx"/>
+                                    <action selector="loadPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AWv-sT-x3x"/>
                                 </connections>
                             </button>
                         </subviews>

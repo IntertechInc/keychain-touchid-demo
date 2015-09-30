@@ -24,34 +24,45 @@ class KeychainInternetPasswordViewController: UIViewController {
         // A dictionary of attributes to delete our Keychain Item(s).
         // The fewer the attributes, the more items you could (unintentionally) match,
         // so be careful!
-        let delAttrs : [NSObject:AnyObject] = [
-            kSecClass : kSecClassInternetPassword,
-            kSecAttrAccount : "Intertech"
-        ]
-        
-        // TODO: A best practice is to update an existing Keychain item,
-        // rather than delete -> add.  Rewrite to follow this pattern.
-        //
-        // To delete any existing Keychain Item for this Service/Account combination,
-        // pass in the Dictionary of attributes to SecItemDelete
-        SecItemDelete(delAttrs)
-        
-        // A dictionary of attributes that comprise our Keychain Item.
-        let attrs : [NSObject:AnyObject] = [
+        var searchAttrs : [NSObject:AnyObject]! = [
             kSecClass : kSecClassInternetPassword,
             kSecAttrAccount : "Intertech",
-            kSecAttrProtocol : protocolField.text!, // i.e. http://
-            kSecAttrServer : serverField.text!, // i.e. intertech.com
-            kSecAttrPath : pathField.text!, // i.e. /training/ios
-            kSecValueData : passwordData // the password for this resource.
+            kSecReturnAttributes : kCFBooleanTrue
         ]
         
-        let resultCode = SecItemAdd(attrs, nil)
-        if resultCode != errSecSuccess {
-            keychainField.text = "Unable to Add Internet Data to Keychain.  Error Code: \(resultCode)"
+        // First attempt to retrieve the Keychain Item. If something is returned
+        // use that dictionary to do an Update.  If not, do an Add.
+        var returnedAttrsRef:AnyObject?
+        if SecItemCopyMatching(searchAttrs, &returnedAttrsRef) == errSecSuccess {
+            var returnedAttrs : [NSObject : AnyObject]! = returnedAttrsRef as? [NSObject : AnyObject]
+            // The "search" dictionary cannot contain any "Return" keys.
+            searchAttrs[kSecReturnAttributes] = nil
+            // Add the values we are updating
+            returnedAttrs[kSecAttrProtocol] = protocolField.text!
+            returnedAttrs[kSecAttrServer] = serverField.text!
+            returnedAttrs[kSecAttrPath] = pathField.text!
+            returnedAttrs[kSecValueData] = passwordData
+            let resultCode = SecItemUpdate(searchAttrs, returnedAttrs)
+            if resultCode != errSecSuccess {
+                keychainField.text = "Unable to Update Password in Keychain.  Error Code: \(resultCode)"
+            } else {
+                clearFieldsAndRemoveKeyboard()
+                keychainField.text = "Successfully Added Internet Data"
+            }
         } else {
-            clearFieldsAndRemoveKeyboard()
-            keychainField.text = "Successfully Added Internet Data"
+            // The "search" dictionary cannot contain any "Return" keys.
+            searchAttrs[kSecReturnAttributes] = nil
+            searchAttrs[kSecAttrProtocol] = protocolField.text!
+            searchAttrs[kSecAttrServer] = serverField.text!
+            searchAttrs[kSecAttrPath] = pathField.text!
+            searchAttrs[kSecValueData] = passwordData
+            let resultCode = SecItemAdd(searchAttrs, nil)
+            if resultCode != errSecSuccess {
+                keychainField.text = "Unable to Add Internet Data to Keychain.  Error Code: \(resultCode)"
+            } else {
+                clearFieldsAndRemoveKeyboard()
+                keychainField.text = "Successfully Added Internet Data"
+            }
         }
     }
     
@@ -80,9 +91,6 @@ class KeychainInternetPasswordViewController: UIViewController {
             kSecAttrAccount : "Intertech"
         ]
         
-        // TODO: A best practice is to update an existing Keychain item,
-        // rather than delete -> add.  Rewrite to follow this pattern.
-        //
         // To delete any existing Keychain Item for this Service/Account combination,
         // pass in the Dictionary of attributes to SecItemDelete
         SecItemDelete(delAttrs)
