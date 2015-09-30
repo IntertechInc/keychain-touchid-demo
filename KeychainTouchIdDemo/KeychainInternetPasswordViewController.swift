@@ -93,8 +93,12 @@ class KeychainInternetPasswordViewController: UIViewController {
         
         // To delete any existing Keychain Item for this Service/Account combination,
         // pass in the Dictionary of attributes to SecItemDelete
-        SecItemDelete(delAttrs)
-        keychainField.text = ""
+        let resultCode = SecItemDelete(delAttrs)
+        if resultCode != errSecSuccess {
+            keychainField.text = "Unable to Update Password in Keychain.  Error Code: \(resultCode)"
+        } else {
+            keychainField.text = ""
+        }
     }
     
     

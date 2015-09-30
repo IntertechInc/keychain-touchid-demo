@@ -66,8 +66,13 @@ class TouchIDAuthViewController: UIViewController {
             kSecAttrAccount : "Instructor"
         ]
         // Delete any Keychain Item(s) that match our attributes above.
-        SecItemDelete(attrs)
-        keychainField.text = ""
+        let resultCode = SecItemDelete(attrs)
+        
+        if resultCode != errSecSuccess {
+            keychainField.text = "Unable to Update Password in Keychain.  Error Code: \(resultCode)"
+        } else {
+            keychainField.text = ""
+        }
     }
     
     func retrievePassword() -> String? {
