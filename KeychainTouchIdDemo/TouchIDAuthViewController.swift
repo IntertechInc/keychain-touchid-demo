@@ -45,9 +45,11 @@ class TouchIDAuthViewController: UIViewController {
         ]
         
         // Although it is better to do an update than a Delete -> Add,
-        // The ACL used would make the workflow a bit odd
+        // The ACL used would make the workflow a bit odd in this example
         // (i.e. a user would be challenged to authenticate when they
-        // update a key).
+        // update a key).  In some cases that might be exactly what you
+        // want to happen (in which case, you should use the Update pattern
+        // used in KeychainPasswordViewController.
         SecItemDelete(attrs)
         let resultCode = SecItemAdd(attrs, nil)
         if resultCode != errSecSuccess {
