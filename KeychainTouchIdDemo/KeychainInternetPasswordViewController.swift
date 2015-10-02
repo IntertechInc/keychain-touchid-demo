@@ -115,9 +115,10 @@ class KeychainInternetPasswordViewController: UIViewController {
             // the Keychain Item attributes.
             kSecReturnData : kCFBooleanTrue
         ]
+
+        // Because we specified that we wanted the Keychain Item attributes,
+        // the address to the pointer will be used for a Dictionary, rather than an NSData object.
         var dictionaryRef:AnyObject?
-        // Because we specified that we wanted the attributes, 
-        // the address to a dictionary pointer is used instead of an NSData object.
         SecItemCopyMatching(attrs, &dictionaryRef)
         if let dictionary = dictionaryRef as? NSDictionary {
             return dictionary

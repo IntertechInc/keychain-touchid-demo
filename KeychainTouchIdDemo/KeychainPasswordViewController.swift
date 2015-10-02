@@ -54,7 +54,7 @@ class KeychainPasswordViewController: UIViewController {
             // The return value is an OSStatus code.  Possible codes include:
             // errSecSuccess, errSecParam (one or more of the attributes is invalid for
             // this type of class), etc.
-            searchAttrs[kSecReturnAttributes] = nil
+            searchAttrs[kSecReturnAttributes] = nil // Must remove this key before using with SecItemAdd
             searchAttrs[kSecValueData] = passwordData
             let resultCode = SecItemAdd(searchAttrs, nil)
             if resultCode != errSecSuccess {
@@ -92,11 +92,11 @@ class KeychainPasswordViewController: UIViewController {
             kSecReturnData : kCFBooleanTrue
         ]
         
-        var passwordData:AnyObject?
         // Retrieve Keychain Item(s) with SecItemCopyMatching.
         // The first parameter is the Dictionary of attributes (above),
-        // and the second parameter is a pointer to an object that should
-        // store the returned secret.
+        // and the second parameter is the address to a pointer, which
+        // will eventually point to the returned secret.
+        var passwordData:AnyObject?
         SecItemCopyMatching(attrs, &passwordData)
         // The returned secret is in an NSData format; convert to a String.
         let password = String(data: (passwordData as? NSData) ?? NSData(), encoding: NSUTF8StringEncoding)
